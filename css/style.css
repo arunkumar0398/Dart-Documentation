@@ -1,0 +1,101 @@
+
+.nav-list{
+  height: 80%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  overflow-x: hidden;
+  list-style-type: none;
+  margin-left: 0px;
+  margin-top: 58px;
+}
+@media (max-height: 450px) {
+  .nav-list {width: 80%;}
+}
+hr{
+  margin-left: -36px;
+  margin-right: 4px;
+}
+li {
+  font-size: 16px;
+  padding: 6px 0px;
+  color: white;
+}
+li:hover{
+  color: black;
+}
+nav {
+  height: 664px;
+  width: 277px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-style: outset;
+  margin: auto 0px auto 0px;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-header
+{
+  margin: 10px 0px 0px 56px;
+}
+
+h2 {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+#main-doc {
+  margin-left: 310px;
+}
+.sec-header {
+  font-family: "Times New Roman";
+  font-size: 26px;
+  font-weight: bold;
+}
+.main-section {
+  padding-top: 10px;
+}
+.imp-list{
+  color: black;
+  padding: 6px 0px;
+}
+.jumbotro{
+  height: 84px;
+  width: 90%;
+  background-color: rgb(240, 240, 240);
+  border-radius: 0px;
+  
+}
+
+.jumbotro1{
+  height: 186px;
+  width: 90%;
+  background-color: rgb(240, 240, 240);
+  border-radius: 0px;
+}
+.jumbotro2{
+  height: 296px;
+  width: 90%;
+  background-color: rgb(240, 240, 240);
+  border-radius: 0px;
+}
+pre {
+  margin-left: -10px;
+}
+.ref-link {
+  text-decoration: none;
+  color: blue;
+}
+p{
+  font-size: 17px;;
+}
+.ref-content {
+  margin-left: 24px;
+}

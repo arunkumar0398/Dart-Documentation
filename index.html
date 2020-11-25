@@ -1,0 +1,478 @@
+
+<html>
+
+<head> 
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<nav id="navbar">
+  <header class="nav-header">
+    <h2>Dart Docs</h2>
+  </header>
+  <hr>
+  <ul class="nav-list">
+    <li>
+      <a class="nav-link" href="#INTRODUCTION">Introduction</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#A_BASIC_DART_PROGRAM">A Basic Dart Program</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#IMPORTANT_CONCEPTS">Important Concepts</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#HELLO_WORLD">Hello World</a>
+    </li>
+    <hr>
+    <li>
+       <a class="nav-link" href="#VARIABLES">Variables</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#CONTROL_FLOW_STATEMENTS">Control Flow Statements</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#FUNCTIONS">
+        Functions
+      </a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#COMMENTS">Comments</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#IMPORTS">Imports</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#CLASSES">Classes</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#INHERITANCE">Inheritance</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#MIXINS">Mixins</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#INTERFACES_AND_ABSTRACT_CLASSES">Interfaces and abstract classes</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#ASYNC">Async</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#EXCEPTIONS">Exceptions</a>
+    </li>
+    <hr>
+    <li>
+      <a class="nav-link" href="#REFERENCE">Reference</a>
+    </li>
+  </ul>
+</nav>
+<main id="main-doc">
+    <h1 style="text-align:center;">Dart Documentation</h1>
+  <section id="INTRODUCTION" class="main-section">
+    <header class="sec-header">
+      Introduction
+    </header>
+      <p>
+        Dart is a client-optimized language for fast apps on any platform.
+    </p>
+    <h3>Dart 2.0</h3>
+    <p>
+      Dart 2.0 implemented a new sound type system. Before Dart 2.0, types weren’t fully sound, and Dart relied heavily on runtime type checking. Dart 1.x code had to be migrated to Dart 2.
+    </p>
+    <h3>Dart 3.0</h3>
+    <p>
+      Dart 2.1 added support for int-to-double conversion, allowing developers to set double values using integer literals. This feature removed the annoyance of being forced to use a double literal (for example, 4.0) when the value was conceptually an integer. In the following Flutter code, horizontal and vertical have type double:
+    </p>
+    <div class="jumbotro">
+      <pre>
+        <code>
+      padding: const EdgeInsets.symmetric(
+        horizontal: 4,
+        vertical: 8,
+      )
+       </code>
+      </pre>
+  </section>
+  <section id="A_BASIC_DART_PROGRAM" class="main-section">
+    <header class="sec-header">
+      A Basic Dart Program
+    </header>
+      <p>The following code uses many of Dart’s most basic features:</p>
+     <div class="jumbotro1">
+       <pre>
+        <code>
+      // Define a function.
+      printInteger(int aNumber) {
+      print('The number is $aNumber.'); // Print to console.
+      }
+      
+      // This is where the app starts executing.
+      main() {
+      var number = 42; // Declare and initialize a  variable.
+      printInteger(number); // Call a function.
+      }
+        </code>
+       </pre>
+    </div>
+  </section>
+  <section id="IMPORTANT_CONCEPTS" class="main-section">
+    <header class="sec-header">
+      Important Concepts
+    </header>   
+    <p>As you learn about the Dart language, keep these facts and concepts in mind:</p>
+    <ul>
+      <li class="imp-list">
+        Everything you can place in a variable is an object, and every object is an instance of a class. Even numbers, functions, and null are objects. All objects inherit from the Object class.
+      </li>
+      <li class="imp-list">
+        Although Dart is strongly typed, type annotations are optional because Dart can infer types. In the code above, number is inferred to be of type int. When you want to explicitly say that no type is expected, use the special type dynamic.
+      </li>
+      <li class="imp-list">
+        Dart supports generic types, like <code>List&lt;int&gt;</code> (a list of integers) or <code>List&lt;dynamic&gt; </code> (a list of objects of any type).
+      </li>
+      <li class="imp-list">
+        Dart supports top-level functions (such as  <code>main()</code>), as well as functions tied to a class or object (static and instance methods, respectively). You can also create functions within functions (nested or local functions).
+      </li>
+      <li class="imp-list">
+        Similarly, Dart supports top-level variables, as well as variables tied to a class or object (static and instance variables). Instance variables are sometimes known as fields or properties.
+      </li>
+      <li class="imp-list">
+       Dart tools can report two kinds of problems: warnings and errors. Warnings are just indications that your code might not work, but they don’t prevent your program from executing. Errors can be either compile-time or run-time. A compile-time error prevents the code from executing at all; a run-time error results in an exception being raised while the code executes. 
+      </li>
+    </ul>
+  </section>
+  <section id="HELLO_WORLD" class="main-section">
+    <header class="sec-header">
+      Hello World
+    </header>
+    <p>Every app has a main() function. To display text on the console, you can use the top-level print() function:</p>
+    <div class="jumbotro">
+      <pre>
+        <code>
+     void main() {
+      print('Hello, World!');
+     }
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="VARIABLES" class="main-section">
+    <header class="sec-header">
+      Variables
+    </header>
+    <p>
+     Even in type-safe Dart code, most variables don’t need explicit types, thanks to type inference:
+    </p>
+    <div class="jumbotro1">
+      <pre>
+        <code>
+        
+     var name = 'Voyager I';
+     var year = 1977;
+     var antennaDiameter = 3.7;
+     var flybyObjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+     var image = {
+      'tags': ['saturn'],
+      'url': '//path/to/saturn.jpg'
+     }
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="CONTROL_FLOW_STATEMENTS" class="main-section">
+    <header class="sec-header">
+      Control flow statements
+    </header>
+    <p>Dart supports the usual control flow statements:</p>
+    <div class="jumbotro2">
+      <pre>
+        <code>
+        
+     if (year >= 2001) {
+      print('21st century');
+     } else if (year >= 1901) {
+      print('20th century');
+     }
+
+     for (var object in flybyObjects) {
+      print(object);
+     }
+
+     for (int month = 1; month <= 12; month++) {
+      print(month);
+     }
+
+     while (year < 2016) {
+      year += 1;
+     }
+        </code>
+      </pre>
+    </div>
+    <p><a href="#">Read more</a> about control flow statements in Dart, including break and continue, switch and case, and assert.</p>
+  </section>
+  <section id="FUNCTIONS" class="main-section">
+    <header class="sec-header">
+      Functions
+    </header>  
+    <p>We recommend specifying the types of each function’s arguments and return value:</p>
+    <div class="jumbotro1">
+      <pre>
+        <code>
+        
+        
+      int fibonacci(int n) {
+        if (n == 0 || n == 1) 
+          return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+      }
+
+      var result = fibonacci(20);
+        </code>
+      </pre>
+    </div>
+  </section>  
+  <section id="COMMENTS" class="main-section">
+    <header class="sec-header">
+      Comments
+    </header>
+    <p>Dart comments usually start with <code>//</code>.</p>
+    <div class="jumbotro1">
+      <pre>
+        <code>
+        
+        
+      // This is a normal, one-line comment.
+
+      /// This is a documentation comment, used to document libraries,
+      /// classes, and their members. Tools like IDEs and dartdoc treat
+      /// doc comments specially.
+
+      /* Comments like these are also supported. */
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="IMPORTS" class="main-section">
+    <header class="sec-header">
+      Imports
+    </header>
+    <p>
+      To access APIs defined in other libraries, use <code>import</code>.
+    </p>
+    <div class="jumbotro1">
+      <pre>
+        <code>
+        
+     // Importing core libraries
+     import 'dart:math';
+
+     // Importing libraries from external packages
+     import 'package:test/test.dart';
+
+     // Importing files
+     import 'path/to/my_other_file.dart';
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="CLASSES" class="main-section">
+      <header class="sec-header">
+        Classes
+    </header>
+    <p>
+      Here’s an example of a class with three properties, two constructors, and a method. One of the properties can’t be set directly, so it’s defined using a getter method (instead of a variable).
+    </p>
+    <div class="jumbotro2" style="height: 410px;">
+      <pre>
+        <code>
+     class Spacecraft {
+        String name;
+        DateTime launchDate;
+           
+        // Constructor, with syntactic sugar for assignment to members.
+        Spacecraft(this.name, this.launchDate) {
+        // Initialization code goes here.
+        }   
+           
+        // Named constructor that forwards to the default one.
+        Spacecraft.unlaunched(String name) : this(name, null);
+        
+        int get launchYear =>
+              launchDate?.year; // read-only non-final property
+        // Method.
+        void describe() {
+          print('Spacecraft: $name');
+          if (launchDate != null) {
+            int years =
+              DateTime.now().difference(launchDate).inDays ~/
+              365;
+         print('Launched: $launchYear ($years years ago)');
+          } else {
+             print('Unlaunched');
+           }
+          }
+        }
+        </code>
+      </pre>
+    </div>
+    <p>
+      You might use the <code>Spacecraft</code> class like this:
+    </p>
+    <div class="jumbotro1" style="height:120px;">
+      <pre>
+         <code>
+         
+      var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
+      voyager.describe();
+
+      var voyager3 = Spacecraft.unlaunched('Voyager III');
+      voyager3.describe();
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="INHERITANCE" class="main-section"> 
+    <header class="sec-header">
+      Inheritance
+    </header>
+    <p>
+      Dart has single inheritance.
+    </p>
+    <div class="jumbotro1" style="height: 140px;">
+      <pre>
+        <code>
+        
+     class Orbiter extends Spacecraft {
+       double altitude;
+       Orbiter(String name, DateTime launchDate, this.altitude)
+        : super(name, launchDate);
+    }
+        </code>
+      </pre>  
+    </div>
+  </section>
+  <section id="MIXINS" class="main-section">
+     <header class="sec-header">
+       Mixins
+    </header>
+    <p>
+      Mixins are a way of reusing code in multiple class hierarchies. The following class can act as a mixin:
+    </p>
+    <div class="jumbotro1" style="height: 150px;">
+      <pre>
+        <code>
+        
+     class Piloted {
+        int astronauts = 1;
+      
+        void describeCrew() {
+          print('Number of astronauts: $astronauts');
+       }
+    }
+        </code>
+      </pre>
+    </div>
+    
+  </section>
+  <section id="INTERFACES_AND_ABSTRACT_CLASSES" class="main-section">
+    <header class="sec-header">
+      Interfaces and Abstract Classes
+    </header>
+    <p>
+      Dart has no <code>interface</code> keyword. Instead, all classes implicitly define an interface. Therefore, you can implement any class.
+    </p>
+    <div class="jumbotro1" style="height: 100px;">
+      <pre>
+        <code>
+        
+    class MockSpaceship implements Spacecraft {
+    // ···
+    }   
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="ASYNC" class="main-section">
+    <header class="sec-header">
+      Async
+    </header>
+    <p>
+      Avoid callback hell and make your code much more readable by using <code>async</code> and <code>await.</code>
+    </p>
+    <div class="jumbotro1" style="height:140px;">
+      <pre>
+        <code>
+        
+      const oneSecond = Duration(seconds: 1);
+      // ···
+      Future&lt;void&gt; printWithDelay(String message) async {
+        await Future.delayed(oneSecond);
+        print(message);
+      }   
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="EXCEPTIONS" class="main-section">
+    <header class="sec-header">
+      Exceptions
+    </header>
+    <p>
+      To raise an exception, use <code>throw</code>:
+    </p>
+    <div class="jumbotro1" style="height:100px;">
+      <pre>
+        <code>
+        
+    if (astronauts == 0) {
+      throw StateError('No astronauts.');
+    }
+        </code>   
+      </pre>
+    </div>
+    <p>
+      To catch an exception, use a <code>try</code> statement with on or <code>catch</code> (or both):
+    </p>
+    <div class="jumbotro1">
+      <pre>
+        <code>
+        
+    try {
+        for (var object in flybyObjects) {
+            var description = await File('$object.txt').readAsString();
+            print(description);
+          }
+       } on IOException catch (e) {
+          print('Could not describe object: $e');
+       } finally {
+          flybyObjects.clear();
+       }
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section id="REFERENCE" class="main-section">
+    <header class="sec-header">
+      Reference
+    </header>
+    <p class="ref-content">
+      All the documentation in this page is taken from <a href="https://dart.dev/docs" class="ref-link" target="_blank">Dart Documentation Official Website</a>
+    </p>
+  </section>
+</main>
+</body>
+
+</html>
